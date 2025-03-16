@@ -1,17 +1,15 @@
-from src.Manager import * 
+#!/home/afklex/OneDrive/07_Software/Tools/Eigenentwicklung/STAR/venv3/bin/python3
 from src.Node import * 
-from src.Manager import * 
-from src.Host import * 
 from src.GraphManager import *
 
 if __name__ == "__main__":
     manager = GraphManager()
 
-    host_a = Node("Host_A")
+    host_a = Node("Host_A",serverity=9.5)
 
     host_a.set_attribute({"IP":"10.10.10.10","OS":"Windows 10"})
 
-    host_b = Node("Host_B")
+    host_b = Node("Host_B",serverity=5.9)
     host_c = Node("Host_C")
 
     manager.add_node(host_a)
