@@ -18,7 +18,7 @@ class Node():
     def add_attribute(self, key,value):
         self.attributes[key] = value 
 
-    def set_attribute(self, dictonary:dict):
+    def set_attributes(self, dictonary:dict):
         self.attributes = dictonary
 
     def set_severity(self,serverity):

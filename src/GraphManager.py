@@ -1,4 +1,5 @@
 import networkx as nx 
+from src.NodeManager import NodeManager
 from pyvis.network import Network
 from src.Node import * 
 from src.Edge import * 
@@ -14,6 +15,11 @@ class GraphManager():
 
     def add_edge(self, edge:Node):
         self.graph.add_edge(edge.a.name, edge.b.name, label=edge.attributes["label"])
+
+    def load_node_manager(self,node_manager:NodeManager):
+
+        for node in node_manager.list_nodes():
+            self.add_node(node)
 
     def generate_graph(self):            
         # Add nodes with colors
