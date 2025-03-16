@@ -96,8 +96,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#a7a7a7", "id": "Host_A", "label": "Host_A", "shape": "dot", "title": "IP: 10.10.10.10\nOS: Windows 10\n"}, {"color": "#a7a7a7", "id": "Host_B", "label": "Host_B", "shape": "dot", "title": ""}, {"color": "#a7a7a7", "id": "Host_C", "label": "Host_C", "shape": "dot", "title": ""}]);
-                  edges = new vis.DataSet([{"arrows": "to", "from": "Host_A", "title": "Fuck you", "to": "Host_B"}, {"arrows": "to", "from": "Host_A", "title": "Fuck you", "to": "Host_C"}, {"arrows": "to", "from": "Host_A", "title": "Fuck you 2", "to": "Host_A"}]);
+                  nodes = new vis.DataSet([{"color": "#33ff00", "id": "domain", "label": "domain", "shape": "dot", "title": "type: Service\nPort: 53\n"}, {"color": "#33ff00", "id": "kerberos-sec", "label": "kerberos-sec", "shape": "dot", "title": "type: Service\nPort: 88\n"}, {"color": "#33ff00", "id": "msrpc", "label": "msrpc", "shape": "dot", "title": "type: Service\nPort: 49165\n"}, {"color": "#33ff00", "id": "netbios-ssn", "label": "netbios-ssn", "shape": "dot", "title": "type: Service\nPort: 139\n"}, {"color": "#33ff00", "id": "ldap", "label": "ldap", "shape": "dot", "title": "type: Service\nPort: 3268\n"}, {"color": "#33ff00", "id": "microsoft-ds", "label": "microsoft-ds", "shape": "dot", "title": "type: Service\nPort: 445\n"}, {"color": "#33ff00", "id": "kpasswd5", "label": "kpasswd5", "shape": "dot", "title": "type: Service\nPort: 464\n"}, {"color": "#33ff00", "id": "ncacn_http", "label": "ncacn_http", "shape": "dot", "title": "type: Service\nPort: 49157\n"}, {"color": "#33ff00", "id": "tcpwrapped", "label": "tcpwrapped", "shape": "dot", "title": "type: Service\nPort: 3269\n"}]);
+                  edges = new vis.DataSet([]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
