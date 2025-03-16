@@ -21,6 +21,9 @@ class GraphManager():
         for node in node_manager.list_nodes():
             self.add_node(node)
 
+        for edge in node_manager.get_edges():
+            self.add_edge(edge)
+
     def generate_graph(self):            
         # Add nodes with colors
         for node, attributes in self.graph.nodes(data=True):

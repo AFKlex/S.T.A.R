@@ -14,20 +14,21 @@ class NmapScan():
         tree = ET.parse(self.file_path)
         root = tree.getroot()
         
-        hosts = []
         for host in root.findall('host'):
             address = host.find("address").attrib.get("addr")
             status = host.find("status").attrib.get("state")
             
-            ports = []
+            host_node = self.node_manager.create_host(name=address, ip_address=address) 
+
             for port in host.findall("ports/port"):
                 portid =port.attrib.get("portid")
                 protocol = port.attrib.get("protocol")
                 state = port.find("state").attrib.get("state")
                 service_elem = port.find("service")
                 service = service_elem.attrib.get("name") if service_elem is not None else "unknown"
-                self.node_manager.create_service(service,portid)
-            
+                port_node = self.node_manager.create_service(service,portid)
+
+                self.node_manager.add_edge(port_node,host_node,portid)
             
         
 

@@ -1,9 +1,11 @@
 from src.Node import * 
+from src.Edge import * 
 
 class NodeManager():
 
     def __init__(self) -> None:
         self.nodes = {}  # Dictionary to store nodes by name or other identifiers 
+        self.edges = []
 
     def add_node(self, node):
         """Add a node to the manager."""
@@ -46,10 +48,15 @@ class NodeManager():
         """List all nodes."""
         return list(self.nodes.values())
 
-    def display_node(self, node_name):
-        """Display the node's attributes."""
-        node = self.get_node(node_name)
-        if node:
-            print(node.attributes)
-        else:
-            print(f"Node {node_name} not found.")
+    def add_edge(self,from_node:Node, to_node:Node, label:str):
+        """Create a Edge between two Nodes"""
+        self.edges.append(Edge(from_node,to_node, label))
+
+
+    def get_edges(self):
+        """ Get all Edges"""
+        return self.edges
+
+
+
+
