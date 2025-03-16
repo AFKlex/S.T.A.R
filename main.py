@@ -1,4 +1,3 @@
-#!/home/afklex/OneDrive/07_Software/Tools/Eigenentwicklung/STAR/venv3/bin/python3
 from src.Node import * 
 from src.GraphManager import *
 
